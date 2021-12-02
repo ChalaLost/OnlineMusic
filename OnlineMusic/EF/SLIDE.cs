@@ -22,16 +22,6 @@ namespace OnlineMusic.EF
         [StringLength(800)]
         public string Description { get; set; }
 
-        public DateTime? CreateDate { get; set; }
-
-        [StringLength(50)]
-        public string CreateBuy { get; set; }
-
-        public DateTime? ModifiedDate { get; set; }
-
-        [StringLength(50)]
-        public string ModifiedBuy { get; set; }
-
         public bool? Status { get; set; }
     }
 }

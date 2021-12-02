@@ -26,22 +26,6 @@ namespace OnlineMusic.EF
         [Column(TypeName = "ntext")]
         public string Details { get; set; }
 
-        public DateTime? CreateDate { get; set; }
-
-        [StringLength(50)]
-        public string CreateBuy { get; set; }
-
-        public DateTime? ModifiedDate { get; set; }
-
-        [StringLength(50)]
-        public string ModifiedBuy { get; set; }
-
-        [StringLength(250)]
-        public string MetaKeywords { get; set; }
-
-        [StringLength(250)]
-        public string MetaDescription { get; set; }
-
         public bool? Status { get; set; }
     }
 }
