@@ -35,117 +35,167 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            @Html.ActionLink("ADMIN PAGE", "Index", "Home", null, new { @class = "sidebar-brand d-flex align-items-center justify-content-center" })
-               
-                <!-- Divider -->
-                <hr class="sidebar-divider my-0">
+            @Html.ActionLink("ADMIN PAGE", "Index", "Home", null, new { @class = "sidebar-brand d-flex " })
 
-                <!-- Nav Item - Dashboard -->
-                <li class="nav-item active">
-                    @Html.ActionLink("Dashboard", "Index", "Home", null, new { @class = "nav-link" })
-                </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
 
-                <!-- Divider -->
-                <hr class="sidebar-divider">
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                @Html.ActionLink("Bảng biểu chính", "Index", "Home", null, new { @class = "nav-link" })
+            </li>
 
-                <!-- Heading -->
-                <div class="sidebar-heading">
-                    Interface
-                </div>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
 
-                <!-- Nav Item - Pages Collapse Menu -->
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                       aria-expanded="true" aria-controls="collapseTwo">
-                        <i class="fas fa-fw fa-cog"></i>
-                        <span>Chỉnh Sửa</span>
-                    </a>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            @*//<a class="collapse-item" href="">Buttons</a>*@
-                            @Html.ActionLink("Create User", "Them", "User", null, new { @class = "collapse-item" })
-                            @Html.ActionLink("Button", "Button", "Home", null, new { @class = "collapse-item" })
-                            <!--button 1 html, button 2 actionresult, home ctler-->
-                            @Html.ActionLink("Cards", "Card", "Home", null, new { @class = "collapse-item" })
-                        </div>
+            <!-- Heading -->
+            <div class="sidebar-heading">
+
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                   aria-expanded="true" aria-controls="collapseTwo">
+                    <span>Người dùng</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        @Html.ActionLink("Thêm người dùng", "Index", "User", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Danh sách người dùng", "Danhsach", "User", null, new { @class = "collapse-item" })
+                        <!--button 1 html, button 2 actionresult, home ctler-->
                     </div>
-                </li>
+                </div>
+            </li>
 
-                <!-- Nav Item - Utilities Collapse Menu -->
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                       aria-expanded="true" aria-controls="collapseUtilities">
-                        <i class="fas fa-fw fa-wrench"></i>
-                        <span>Utilities</span>
-                    </a>
-                    <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                         data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Custom Utilities:</h6>
-                            @Html.ActionLink("Color", "utilities_color", "Home", null, new { @class = "collapse-item" })
-                            @Html.ActionLink("Border", "utilities_border", "Home", null, new { @class = "collapse-item" })
-                            @Html.ActionLink("Animation", "utilities_animation", "Home", null, new { @class = "collapse-item" })
-                            @Html.ActionLink("Other", "utilities_other", "Home", null, new { @class = "collapse-item" })
-                        </div>
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                   aria-expanded="true" aria-controls="collapseUtilities">
+                    <span>Sản phẩm</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        @Html.ActionLink("Color", "utilities_color", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Border", "utilities_border", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Animation", "utilities_animation", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Other", "utilities_other", "Home", null, new { @class = "collapse-item" })
                     </div>
-                </li>
-
-                <!-- Divider -->
-                <hr class="sidebar-divider">
-
-                <!-- Heading -->
-                <div class="sidebar-heading">
-                    Addons
                 </div>
+            </li>
 
-                <!-- Nav Item - Pages Collapse Menu -->
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                       aria-expanded="true" aria-controls="collapsePages">
-                        <span>Pages</span>
-                    </a>
-                    <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Login Screens:</h6>
-                            @Html.ActionLink("Login", "Index", "Login", null, new { @class = "collapse-item" })
-                            @Html.ActionLink("Register", "Resgister", "Home", null, new { @class = "collapse-item" })
-                            @Html.ActionLink("Forgot Password", "Forgot_Password", "Home", null, new { @class = "collapse-item" })
-                            <div class="collapse-divider"></div>
-                            <h6 class="collapse-header">Other Pages:</h6>
-                            @Html.ActionLink("404 Page", "Error", "Home", null, new { @class = "collapse-item" })
-                            @Html.ActionLink("Blank", "Blank", "Home", null, new { @class = "collapse-item" })
-                        </div>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseA"
+                   aria-expanded="true" aria-controls="collapseA">
+                    <span>Ca sĩ</span>
+                </a>
+                <div id="collapseA" class="collapse" aria-labelledby="headingUtilities"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        @Html.ActionLink("Color", "utilities_color", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Border", "utilities_border", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Animation", "utilities_animation", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Other", "utilities_other", "Home", null, new { @class = "collapse-item" })
                     </div>
-                </li>
-
-                <!-- Nav Item - Charts -->
-                <li class="nav-item">
-
-                    @Html.ActionLink("Charts", "Chart", "Home", null, new { @class = "nav-link" })
-
-                </li>
-
-                <!-- Nav Item - Tables -->
-                <li class="nav-item">
-                    @Html.ActionLink("Tables", "Table", "Home", null, new { @class = "nav-link" })
-                </li>
-
-                <!-- Divider -->
-                <hr class="sidebar-divider d-none d-md-block">
-
-                <!-- Sidebar Toggler (Sidebar) -->
-                <div class="text-center d-none d-md-inline">
-                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
                 </div>
+            </li>
 
-                <!-- Sidebar Message -->
-                <div class="sidebar-card d-none d-lg-flex">
-                    <img class="sidebar-card-illustration mb-2" src="~/Content/admin/img/undraw_rocket.svg" alt="...">
-                    <p class="text-center mb-2"><strong>Admin </strong> is packed with premium features, components, and more!</p>
-                    <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                   aria-expanded="true" aria-controls="collapsePages">
+                    <span>Pages</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        @Html.ActionLink("Login", "Index", "Login", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Register", "Resgister", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Forgot Password", "Forgot_Password", "Home", null, new { @class = "collapse-item" })
+                        <div class="collapse-divider"></div>
+                        <h6 class="collapse-header">Other Pages:</h6>
+                        @Html.ActionLink("404 Page", "Error", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Blank", "Blank", "Home", null, new { @class = "collapse-item" })
+                    </div>
                 </div>
+            </li>
 
-</ul>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseB"
+                   aria-expanded="true" aria-controls="collapseB">
+                    <span>Tin tức</span>
+                </a>
+                <div id="collapseB" class="collapse" aria-labelledby="headingUtilities"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        @Html.ActionLink("Color", "utilities_color", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Border", "utilities_border", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Animation", "utilities_animation", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Other", "utilities_other", "Home", null, new { @class = "collapse-item" })
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseC"
+                   aria-expanded="true" aria-controls="collapseC">
+                    <span>Slide</span>
+                </a>
+                <div id="collapseC" class="collapse" aria-labelledby="headingUtilities"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        @Html.ActionLink("Color", "utilities_color", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Border", "utilities_border", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Animation", "utilities_animation", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Other", "utilities_other", "Home", null, new { @class = "collapse-item" })
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseD"
+                   aria-expanded="true" aria-controls="collapseD">
+                    <span>Liên hệ</span>
+                </a>
+                <div id="collapseD" class="collapse" aria-labelledby="headingUtilities"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        @Html.ActionLink("Color", "utilities_color", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Border", "utilities_border", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Animation", "utilities_animation", "Home", null, new { @class = "collapse-item" })
+                        @Html.ActionLink("Other", "utilities_other", "Home", null, new { @class = "collapse-item" })
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+
+                @Html.ActionLink("Charts", "Chart", "Home", null, new { @class = "nav-link" })
+
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                @Html.ActionLink("Tables", "Table", "Home", null, new { @class = "nav-link" })
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+            <!-- Sidebar Message -->
+
+
+        </ul>
         <!-- End of Sidebar -->
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -332,7 +382,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Tên Ng Dùng</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Welcome back</span>
                                 <img class="img-profile rounded-circle"
                                      src="~/Content/admin/img/undraw_profile.svg">
                             </a>
@@ -365,7 +415,7 @@
                 <!-- End of Topbar -->
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                       @RenderBody()
+                    @RenderBody()
                 </div>
                 <!-- /.container-fluid -->
 
@@ -375,7 +425,6 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
                     </div>
                 </div>
             </footer>
