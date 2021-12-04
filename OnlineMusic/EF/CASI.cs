@@ -27,9 +27,18 @@ namespace OnlineMusic.EF
         [StringLength(250)]
         public string Image { get; set; }
 
+<<<<<<< HEAD
         [StringLength(800)]
         public string Description { get; set; }
 
         public long? CategoryID { get; set; }
+=======
+        public long? CategoryID { get; set; }
+
+        [Column(TypeName = "ntext")]
+        public string Details { get; set; }
+
+
+>>>>>>> c48b6d3a532f2bfe31f5ed3b9c8977663fad31a9
     }
 }

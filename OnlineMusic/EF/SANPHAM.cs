@@ -36,8 +36,16 @@ namespace OnlineMusic.EF
         [Column(TypeName = "ntext")]
         public string Details { get; set; }
 
+<<<<<<< HEAD
         public int? Quantity { get; set; }
 
         public bool? Status { get; set; }
+=======
+        public bool? Status { get; set; }
+
+        public string Singer { get; set; }
+
+        public int? SingerID { get; set; }
+>>>>>>> c48b6d3a532f2bfe31f5ed3b9c8977663fad31a9
     }
 }
