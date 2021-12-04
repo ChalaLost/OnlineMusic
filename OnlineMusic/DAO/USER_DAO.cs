@@ -36,16 +36,36 @@ namespace OnlineMusic.DAO
 
             return db.USERs.OrderByDescending(x=>x.ID).ToPagedList(page, pageSize);
         }
-        public bool Login(string userName, string passWord)
+        public USER GetByID(string userName)
         {
-            var result = db.USERs.Count(x => x.UserName == userName && x.Password == passWord);
-            if(result > 0)
+            return db.USERs.SingleOrDefault(x=>x.UserName == userName);
+        }
+        public int Login(string userName, string password)
+        {
+            var result = db.USERs.SingleOrDefault(x => x.UserName == userName);
+            if (result == null)
             {
-                return true;
+                return 0;
             }
+            var result2 = db.USERs.Where(x => x.UserName == userName && x.Password == password).Count();
+            if (result2 == 0)
+            {
+                return -2;
+            }
+             
             else
             {
-                return false;
+                if(result.Status == false)
+                {
+                    return -1;
+                }
+                else
+                {
+                    if (result.Password == password)
+                        return 1;
+                    else
+                        return -2;
+                }
             }
         }
 

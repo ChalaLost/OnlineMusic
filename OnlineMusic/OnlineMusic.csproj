@@ -174,24 +174,21 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+<<<<<<< HEAD
+    <Compile Include="Common\CommonConstants.cs" />
+    <Compile Include="Common\UserLogin.cs" />
+=======
     <Compile Include="Common\CommonConstrants.cs" />
+>>>>>>> c48b6d3a532f2bfe31f5ed3b9c8977663fad31a9
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAO\USER_DAO.cs" />
-    <Compile Include="EF\ABOUT.cs" />
     <Compile Include="EF\CASI.cs" />
-    <Compile Include="EF\CONTACT.cs" />
     <Compile Include="EF\DANHMUC.cs" />
     <Compile Include="EF\DANHMUCSANPHAM.cs" />
-    <Compile Include="EF\FOOTER.cs" />
-    <Compile Include="EF\LIENHE.cs" />
-    <Compile Include="EF\MENU.cs" />
-    <Compile Include="EF\MENUTYPE.cs" />
     <Compile Include="EF\NEWS.cs" />
-    <Compile Include="EF\NEWSTAG.cs" />
     <Compile Include="EF\OnlineMusicDB.cs" />
     <Compile Include="EF\SANPHAM.cs" />
     <Compile Include="EF\SLIDE.cs" />
-    <Compile Include="EF\TAG.cs" />
     <Compile Include="EF\USER.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
