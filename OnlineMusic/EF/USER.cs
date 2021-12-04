@@ -26,18 +26,8 @@ namespace OnlineMusic.EF
         [StringLength(100)]
         public string Email { get; set; }
 
-        [StringLength(50)]
+        [StringLength(100)]
         public string Phone { get; set; }
-
-        public DateTime? CreateDate { get; set; }
-
-        [StringLength(50)]
-        public string CreateBuy { get; set; }
-
-        public DateTime? ModifiedDate { get; set; }
-
-        [StringLength(50)]
-        public string ModifiedBuy { get; set; }
 
         public bool? Status { get; set; }
     }

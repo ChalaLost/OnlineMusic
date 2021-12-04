@@ -13,43 +13,26 @@ namespace OnlineMusic.EF
         [StringLength(300)]
         public string Name { get; set; }
 
+        [StringLength(10)]
+        public string Code { get; set; }
+
         [StringLength(200)]
         public string MetaTitle { get; set; }
-
-        [StringLength(800)]
-        public string Description { get; set; }
 
         [StringLength(250)]
         public string Image { get; set; }
 
-        public long? CategoryID { get; set; }
+        [StringLength(800)]
+        public string Description { get; set; }
+
+        [Column(TypeName = "xml")]
+        public string MoreImage { get; set; }
 
         [Column(TypeName = "ntext")]
         public string Details { get; set; }
 
-        public DateTime? CreateDate { get; set; }
-
-        [StringLength(50)]
-        public string CreateBuy { get; set; }
-
-        public DateTime? ModifiedDate { get; set; }
-
-        [StringLength(50)]
-        public string ModifiedBuy { get; set; }
-
-        [StringLength(250)]
-        public string MetaKeywords { get; set; }
-
-        [StringLength(250)]
-        public string MetaDescription { get; set; }
-
         public bool? Status { get; set; }
 
-        public DateTime? TopHot { get; set; }
-
-        public int? ViewCount { get; set; }
-
-        [StringLength(500)]
-        public string Tags { get; set; }
+        public DateTime? CreateDate { get; set; }
     }
 }
