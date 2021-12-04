@@ -21,6 +21,12 @@ namespace OnlineMusic.EF
 
         public int? DisplayOrder { get; set; }
 
+<<<<<<< HEAD
+=======
+        [StringLength(200)]
+        public string SeoTitle { get; set; }
+
+>>>>>>> c48b6d3a532f2bfe31f5ed3b9c8977663fad31a9
         public bool? Status { get; set; }
 
         public int? ShowOnHome { get; set; }

@@ -23,6 +23,7 @@ namespace OnlineMusic.EF
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+<<<<<<< HEAD
             modelBuilder.Entity<CASI>()
                 .Property(e => e.Meta)
                 .IsFixedLength();
@@ -49,6 +50,39 @@ namespace OnlineMusic.EF
 
             modelBuilder.Entity<NEWS>()
                 .Property(e => e.MetaTitle)
+=======
+            modelBuilder.Entity<ABOUT>()
+                .Property(e => e.MetaTitle)
+                .IsUnicode(false);
+
+            
+            modelBuilder.Entity<CASI>()
+                .Property(e => e.MetaTitle)
+                .IsUnicode(false);
+
+            
+            modelBuilder.Entity<DANHMUC>()
+                .Property(e => e.MetaTitle)
+                .IsUnicode(false);
+
+
+            modelBuilder.Entity<DANHMUCSANPHAM>()
+                .Property(e => e.MetaTitle)
+                .IsUnicode(false);
+
+
+            modelBuilder.Entity<FOOTER>()
+                .Property(e => e.ID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<NEWS>()
+                .Property(e => e.MetaTitle)
+                .IsUnicode(false);
+
+
+            modelBuilder.Entity<NEWSTAG>()
+                .Property(e => e.TagID)
+>>>>>>> c48b6d3a532f2bfe31f5ed3b9c8977663fad31a9
                 .IsUnicode(false);
 
             modelBuilder.Entity<SANPHAM>()
@@ -67,6 +101,14 @@ namespace OnlineMusic.EF
                 .Property(e => e.PromotionPrice)
                 .HasPrecision(18, 0);
 
+<<<<<<< HEAD
+=======
+
+            modelBuilder.Entity<TAG>()
+                .Property(e => e.ID)
+                .IsUnicode(false);
+
+>>>>>>> c48b6d3a532f2bfe31f5ed3b9c8977663fad31a9
             modelBuilder.Entity<USER>()
                 .Property(e => e.UserName)
                 .IsUnicode(false);
