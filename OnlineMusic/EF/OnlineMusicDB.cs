@@ -34,65 +34,21 @@ namespace OnlineMusic.EF
                 .Property(e => e.MetaTitle)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<ABOUT>()
-                .Property(e => e.CreateBuy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ABOUT>()
-                .Property(e => e.ModifiedBuy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ABOUT>()
-                .Property(e => e.MetaDescription)
-                .IsFixedLength();
-
+            
             modelBuilder.Entity<CASI>()
                 .Property(e => e.MetaTitle)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<CASI>()
-                .Property(e => e.CreateBuy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<CASI>()
-                .Property(e => e.ModifiedBuy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<CASI>()
-                .Property(e => e.MetaDescription)
-                .IsFixedLength();
-
+            
             modelBuilder.Entity<DANHMUC>()
                 .Property(e => e.MetaTitle)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<DANHMUC>()
-                .Property(e => e.CreateBuy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<DANHMUC>()
-                .Property(e => e.ModifiedBuy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<DANHMUC>()
-                .Property(e => e.MetaDescription)
-                .IsFixedLength();
 
             modelBuilder.Entity<DANHMUCSANPHAM>()
                 .Property(e => e.MetaTitle)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<DANHMUCSANPHAM>()
-                .Property(e => e.CreateBuy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<DANHMUCSANPHAM>()
-                .Property(e => e.ModifiedBuy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<DANHMUCSANPHAM>()
-                .Property(e => e.MetaDescription)
-                .IsFixedLength();
 
             modelBuilder.Entity<FOOTER>()
                 .Property(e => e.ID)
@@ -102,17 +58,6 @@ namespace OnlineMusic.EF
                 .Property(e => e.MetaTitle)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<NEWS>()
-                .Property(e => e.CreateBuy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<NEWS>()
-                .Property(e => e.ModifiedBuy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<NEWS>()
-                .Property(e => e.MetaDescription)
-                .IsFixedLength();
 
             modelBuilder.Entity<NEWSTAG>()
                 .Property(e => e.TagID)
@@ -134,25 +79,6 @@ namespace OnlineMusic.EF
                 .Property(e => e.PromotionPrice)
                 .HasPrecision(18, 0);
 
-            modelBuilder.Entity<SANPHAM>()
-                .Property(e => e.CreateBuy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<SANPHAM>()
-                .Property(e => e.ModifiedBuy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<SANPHAM>()
-                .Property(e => e.MetaDescription)
-                .IsFixedLength();
-
-            modelBuilder.Entity<SLIDE>()
-                .Property(e => e.CreateBuy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<SLIDE>()
-                .Property(e => e.ModifiedBuy)
-                .IsUnicode(false);
 
             modelBuilder.Entity<TAG>()
                 .Property(e => e.ID)
@@ -164,14 +90,6 @@ namespace OnlineMusic.EF
 
             modelBuilder.Entity<USER>()
                 .Property(e => e.Password)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<USER>()
-                .Property(e => e.CreateBuy)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<USER>()
-                .Property(e => e.ModifiedBuy)
                 .IsUnicode(false);
         }
     }
